@@ -4,7 +4,8 @@ import Image from "next/image";
 import PriceTag from "@/components/PriceTag";
 import { cache } from "react";
 import { Metadata } from "next";
-
+import AddToCartButton from "./AddToCartButton";
+import { incrementProductQuantity } from "./actions";
 interface ProductPageProps {
   params: {
     id: string;
@@ -23,6 +24,7 @@ export async function generateMetadata({
   const product = await getProduct(id);
 
   return {
+    metadataBase: new URL("http://localhost:3000"),
     title: product.name + " - Mood",
     description: product.description,
     openGraph: {
@@ -55,6 +57,10 @@ export default async function ProductPage({
         <PriceTag price={product.price} className="mt-4" />
         <p className="py-6">{product.description}</p>
       </div>
+      <AddToCartButton
+        productId={product.id}
+        incrementProductQuantity={incrementProductQuantity}
+      />
     </div>
   );
 }

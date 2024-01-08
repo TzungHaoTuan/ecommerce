@@ -20,8 +20,8 @@ const config: Config = {
     themes: [
       {
         mytheme: {
-          primary: "#c084fc",
-          secondary: "#0369a1",
+          primary: "#fbcfe8",
+          secondary: "#db2777",
           accent: "#00b9ba",
           neutral: "#1f2937",
           "base-100": "#fff6ff",
@@ -32,6 +32,7 @@ const config: Config = {
           body: {
             "background-color": "#e3e6e6",
           },
+          hover: "#ddd6fe",
         },
       },
     ],
