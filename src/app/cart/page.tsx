@@ -9,7 +9,7 @@ export const metaData = {
 export default async function CartPage() {
   const cart = await getCart();
   return (
-    <div>
+    <div className="min-h-[calc(100vh-318px)]">
       <h1 className="mb-6 text-3xl font-bold">Shopping Cart</h1>
       {cart?.items.map((cartItem) => (
         <CartEntry
