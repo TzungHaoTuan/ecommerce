@@ -3,7 +3,7 @@ import CartEntry from "./CartEntry";
 import { setProductQuantity } from "./actions";
 import { formatPrice } from "@/lib/db/format";
 
-export const metaData = {
+export const metadata = {
   title: "Your Cart - Mood",
 };
 export default async function CartPage() {
